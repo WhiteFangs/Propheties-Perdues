@@ -102,29 +102,29 @@ export default {
         },
         {
           text: "inspirations",
-          value: 3
+          value: 4
         },
         {
           text: "espoirs",
-          value: 3
+          value: 4
         },
         {
           text: "regrets",
-          value: -3
+          value: -4
         },
         {
           text: "peurs",
-          value: -3
+          value: -4
         }
       ] as Option[],
       devenir: [
         {
           text: "illusions",
-          value: -3
+          value: -4
         },
         {
           text: "évidences",
-          value: 3
+          value: 4
         },
         {
           text: "réalité",
@@ -132,21 +132,21 @@ export default {
         },
         {
           text: "poussières",
-          value: -3
+          value: -4
         },
         {
           text: "volontés",
-          value: 3
+          value: 4
         },
         {
-          text: "folies",
+          text: "absurdités",
           value: -5
         },
       ] as Option[],
       duo1: [
         {
           text: "joie",
-          value: 3
+          value: 4
         },
         {
           text: "mort",
@@ -158,21 +158,21 @@ export default {
         },
         {
           text: "malheur",
-          value: -3
+          value: -4
         },
         {
           text: "plaisir",
-          value: 3
+          value: 4
         },
         {
           text: "douleur",
-          value: -3
+          value: -4
         },
       ] as Option[],
       duo2: [
         {
           text: "bonheur",
-          value: 3
+          value: 4
         },
         {
           text: "destruction",
@@ -184,25 +184,25 @@ export default {
         },
         {
           text: "tristesse",
-          value: -3
+          value: -4
         },
         {
           text: "abondance",
-          value: 3
+          value: 4
         },
         {
           text: "misère",
-          value: -3
+          value: -4
         },
       ] as Option[],
       conclusion: [
         {
           text: "triomphe",
-          value: 3
+          value: 4
         },
         {
           text: "déclin",
-          value: -3
+          value: -4
         },
         {
           text: "chaos",
@@ -214,11 +214,11 @@ export default {
         },
         {
           text: "ascension",
-          value: 3
+          value: 4
         },
         {
           text: "défaite",
-          value: -3
+          value: -4
         },
       ] as Option[],
     }
