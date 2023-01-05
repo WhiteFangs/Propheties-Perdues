@@ -166,7 +166,7 @@ export default {
         },
         {
           text: "douleur",
-          value: 3
+          value: -3
         },
       ] as Option[],
       duo2: [
@@ -218,7 +218,7 @@ export default {
         },
         {
           text: "défaite",
-          value: 3
+          value: -3
         },
       ] as Option[],
     }

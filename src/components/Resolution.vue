@@ -1,5 +1,6 @@
 <template>
   <div class="story">
+    <h2>{{ score }}</h2>
     <div>
       Quelques temps après être sorti, alors que {{ randomTimeVerbe }} {{ time }},
     </div>
@@ -41,6 +42,21 @@ export default {
     },
     randomTimeVerbe: function (): string {
       return this.timeVerbe[Math.floor(Math.random() * this.timeVerbe.length)];
+    },
+    score: function (): number {
+      let score = 0;
+      const concept = this.store.choices.concept;
+      const devenir = this.store.choices.devenir;
+      if (concept && devenir) {
+        score += concept.value * devenir.value;
+      }
+      const duo1 = this.store.choices.duo1;
+      const duo2 = this.store.choices.duo2;
+      const conclusion = this.store.choices.conclusion;
+      if (duo1 && duo2 && conclusion) {
+        score += duo1.value + duo2.value + conclusion.value;
+      }
+      return score;
     }
   }
 };
