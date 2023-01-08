@@ -20,6 +20,7 @@ export default {
     font-size: .9em;
     cursor: pointer;
     border: .5em outset #5c2d13;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .button:hover {

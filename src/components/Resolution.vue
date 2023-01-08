@@ -5,23 +5,21 @@
       Quelques temps après être sorti, alors que {{ randomTimeVerbe }} {{ time }},
     </div>
     <div>
-      <div v-if="isImpossible">Impossible</div>
-      <div v-if="goodEnding">Good ending</div>
-      <div v-if="badEnding">Bad ending</div>
-      <div v-if="bestEnding">Best ending</div>
-      <div v-if="worstEnding">Worst ending</div>
-    </div>
-    <div>
       TODO
     </div>
+    <ListEndings :end="ending" />
   </div>
 </template>
 
 <script lang="ts">
 import type { Option } from "@/interfaces/option";
 import { useChoiceStore } from "@/stores/choice";
+import ListEndings from "./ListEndings.vue";
 
 export default {
+  components: {
+    ListEndings
+  },
   setup: function () {
     const store = useChoiceStore();
     return {
@@ -76,6 +74,20 @@ export default {
     },
     worstEnding: function (): boolean {
       return this.score === -40;
+    },
+    ending: function (): string {
+      if (this.worstEnding) {
+        return "La pire fin";
+      } else if (this.badEnding) {
+        return "La mauvaise fin";
+      } else if (this.goodEnding) {
+        return "La bonne fin";
+      } else if (this.bestEnding) {
+        return "La meilleure fin";
+      } else if (this.isImpossible) {
+        return "La fin incertaine";
+      }
+      return ""
     }
   }
 };

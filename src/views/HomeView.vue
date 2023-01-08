@@ -19,9 +19,10 @@
       <Resolution @change="setStatus" v-if="status === 'end'" />
     </Transition>
     <Transition>
-      <div v-if="status === 'quit'">
-        TODO
-      </div>
+      <Quit @change="setStatus" v-if="status === 'quit'" />
+    </Transition>
+    <Transition>
+      <Rentre @change="setStatus" v-if="status === 'rentre'" />
     </Transition>
   </main>
 </template>
@@ -33,6 +34,8 @@ import Introduction from "@/components/Introduction.vue";
 import Salle from "../components/Salle.vue";
 import Resolution from "../components/Resolution.vue";
 import Prophetie from "../components/Prophetie.vue";
+import Quit from "../components/Quit.vue";
+import Rentre from "../components/Rentre.vue";
 
 export default {
   components: {
@@ -41,7 +44,9 @@ export default {
     Resolution,
     Hesitation,
     Porte,
-    Prophetie
+    Prophetie,
+    Quit,
+    Rentre
   },
   data: function () {
     return {

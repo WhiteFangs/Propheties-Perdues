@@ -12,10 +12,14 @@ export const useChoiceStore = defineStore('choice', {
       "duo2": null as unknown as Option,
       "conclusion": null as unknown as Option,
     } as { [type: string]: Option },
+    endings: [] as string[]
   }),
   actions: {
     setChoice: function (choice: Option, type: string) {
       this.choices[type] = choice;
+    },
+    addEnding: function (ending: string) {
+      this.endings.push(ending);
     }
   }
 })

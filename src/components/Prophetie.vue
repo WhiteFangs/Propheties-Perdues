@@ -263,16 +263,13 @@ export default {
 };
 
 /*
-- Equilibrer le système
 - Pire fin
 - Meilleure fin
 - Bonne fin
 - Mauvaise fin
-- Donner l'option de ne pas entrer dans la pièce, et de la condamner ou d'y revenir, etc.
-- Fins spéciales :
-= Ne pas sortir de la pièce (ajouter des choix à 0)
-= La prophétie ne se réalise pas (pires et meilleurs choix opposés)
-= Ne pas entrer dans la pièce et la condamner: le mystère fait partie du mythe
+- La fin tranquille
+- La fin incertaine: le mystère fait partie du mythe.
+- La fin certaine
 */
 
 </script>
