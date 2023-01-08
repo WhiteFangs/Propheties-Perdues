@@ -1,19 +1,18 @@
 <template>
-  <div class="story">
-    <h2>{{ score }}</h2>
-    <div v-if="isImpossible">Impossible</div>
-    <div v-if="goodEnding">Good ending</div>
-    <div v-if="badEnding">Bad ending</div>
-    <div v-if="bestEnding">Best ending</div>
-    <div v-if="worstEnding">Worst ending</div>
+  <div>
+    <!-- <h2>{{ score }}</h2> -->
     <div>
       Quelques temps après être sorti, alors que {{ randomTimeVerbe }} {{ time }},
     </div>
     <div>
-
+      <div v-if="isImpossible">Impossible</div>
+      <div v-if="goodEnding">Good ending</div>
+      <div v-if="badEnding">Bad ending</div>
+      <div v-if="bestEnding">Best ending</div>
+      <div v-if="worstEnding">Worst ending</div>
     </div>
     <div>
-
+      TODO
     </div>
   </div>
 </template>
@@ -29,6 +28,7 @@ export default {
       store
     }
   },
+  emits: ["change"],
   data: function () {
     return {
       timeVerbe: ["dominait", "culminait", "régnait", "triomphait"]
@@ -81,9 +81,3 @@ export default {
 };
 
 </script>
-
-<style>
-.story {
-  margin: 2em;
-}
-</style>

@@ -30,10 +30,10 @@ export default {
     },
     methods: {
         change: function () {
-            // if (this.index < this.options.length - 1) {
+            if (this.index < this.options.length - 1) {
                 this.index = (this.index + 1) % this.options.length;
                 this.store.setChoice(this.options[this.index], this.type);
-            // }
+            }
         }
     },
     mounted: function () {
