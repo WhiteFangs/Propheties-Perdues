@@ -24,6 +24,12 @@
     <Transition>
       <Rentre @change="setStatus" v-if="status === 'rentre'" />
     </Transition>
+    <Transition>
+      <Stay @change="setStatus" v-if="status === 'stay'" />
+    </Transition>
+    <Transition>
+      <Out @change="setStatus" v-if="status === 'out'" />
+    </Transition>
   </main>
 </template>
 
@@ -36,6 +42,8 @@ import Resolution from "../components/Resolution.vue";
 import Prophetie from "../components/Prophetie.vue";
 import Quit from "../components/Quit.vue";
 import Rentre from "../components/Rentre.vue";
+import Stay from "../components/Stay.vue";
+import Out from "../components/Out.vue";
 
 export default {
   components: {
@@ -46,7 +54,9 @@ export default {
     Porte,
     Prophetie,
     Quit,
-    Rentre
+    Rentre,
+    Stay,
+    Out
   },
   data: function () {
     return {

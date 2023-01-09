@@ -69,7 +69,7 @@
       <ButtonVue :text="'Rester dans la salle et condamner l\'entrée'" @click="$emit('change', 'stay')"
         v-if="steps === hesitations.length"></ButtonVue>
     </Transition>
-    <ButtonVue :text="'Sortir de la salle'" @click="$emit('change', 'end')"></ButtonVue>
+    <ButtonVue :text="'Sortir de la salle'" @click="$emit('change', 'out')"></ButtonVue>
   </div>
 </template>
 
