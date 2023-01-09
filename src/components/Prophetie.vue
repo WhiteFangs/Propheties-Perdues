@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>
-      Vous vous approchez. La stèle est gravée d'inscriptions en arioméen, langue oubliée dont vous êtes sans doute le
-      seul traducteur vivant.
+      Vous vous approchez. La stèle est gravée d'inscriptions en arioméen, langue oubliée intraduisible par toute autre
+      personne que vous.
     </p>
     <p>
       Après quelques recherches dans votre livret de runes, vous finissez par interpréter le poème d'en-tête:
@@ -30,20 +30,45 @@
         adviendront, <Mutable :options="conclusion" :type="'conclusion'"></Mutable>.
       </div>
     </div>
-    <p>
-      Intriguant.
-    </p>
-    <p>
-      Durant la transcription de ce deuxième passage, vous remarquez que certains de ces blocs de runes semblent amovibles.
-    </p>
-    <p>
-      En examinant de plus près, cela vous rappelle des tiroirs à pression: en appuyant un instant, le bloc s'enfoncerait légèrement et se décollerait ensuite de la pierre.
-      La rune tomberait alors de la stèle, révélant autre chose qui la remplace.<br/>
-      Vu l'épaisseur, il n'y aurait la place que pour quelques variations de ce style pour chacune.
-    </p>
-    <p>
-      Vous vous reposez et évaluez chaque rune afin d'élaborer la prophétie qui vous convient.
-    </p>
+    <Transition>
+      <div v-if="!noChoice">
+        <p>
+          Intriguant.
+        </p>
+        <p>
+          Durant la transcription de ce deuxième passage, vous remarquez que certains de ces blocs de runes semblent
+          amovibles.
+        </p>
+        <p>
+          En examinant de plus près, cela vous rappelle des tiroirs à pression: en appuyant un instant, le bloc
+          s'enfoncerait légèrement et se décollerait ensuite de la pierre.
+          La rune tomberait alors de la stèle, révélant autre chose qui la remplace.<br />
+          Vu l'épaisseur, il n'y aurait la place que pour quelques variations de ce style pour chacune.
+        </p>
+        <p>
+          Vous vous reposez et évaluez chaque rune afin d'élaborer la prophétie qui vous convient.
+        </p>
+      </div>
+    </Transition>
+    <Transition>
+      <div v-if="noChoice">
+        <p>
+          Ah. Mauvaise nouvelle... Il semble que plus aucun bloc de runes ne soit amovible.
+        </p>
+        <p>
+          Vous n'avez donc plus vraiment le choix.
+        </p>
+        <TransitionGroup name="list">
+          <p v-for="hesitation in hesitations.slice(0, steps)" :key="hesitation">
+            {{ hesitation }}
+          </p>
+        </TransitionGroup>
+      </div>
+    </Transition>
+    <Transition>
+      <ButtonVue :text="'Rester dans la salle et condamner l\'entrée'" @click="$emit('change', 'stay')"
+        v-if="steps === hesitations.length"></ButtonVue>
+    </Transition>
     <ButtonVue :text="'Sortir de la salle'" @click="$emit('change', 'end')"></ButtonVue>
   </div>
 </template>
@@ -52,6 +77,7 @@
 import Mutable from "@/components/Mutable.vue";
 import ButtonVue from './Button.vue';
 import type { Option } from "@/interfaces/option";
+import { useChoiceStore } from "@/stores/choice";
 
 export default {
   components: {
@@ -59,8 +85,17 @@ export default {
     ButtonVue
   },
   emits: ["change"],
+  setup: function () {
+    const store = useChoiceStore();
+    return {
+      store
+    }
+  },
   data: function () {
     return {
+      noChoice: false,
+      hesitations: ["...", "À moins que...", "Non...", "Hm...", "Si.", "C'est une possibilité."],
+      steps: 0,
       nature: [
         {
           text: "déluges de pluie",
@@ -259,6 +294,22 @@ export default {
         },
       ] as Option[],
     }
+  },
+  watch: {
+    "store.allExpired": function () {
+      setTimeout(() => {
+        this.noChoice = true;
+        setInterval(() => {
+          const interval = setInterval(() => {
+            if (this.steps < this.hesitations.length) {
+              this.steps++;
+            } else {
+              clearInterval(interval);
+            }
+          }, 5000);
+        }, 5000);
+      }, 5000);
+    }
   }
 };
 
@@ -291,5 +342,15 @@ export default {
   user-select: none;
   /* Standard */
   font-style: italic;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: opacity 1s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
 }
 </style>

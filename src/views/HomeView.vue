@@ -57,6 +57,13 @@ export default {
     setStatus: function (status: string) {
       this.status = status;
     }
+  },
+  watch: {
+    status: function () {
+      setTimeout(() => {
+        window.scrollTo(0,0);
+      }, 1000);
+    }
   }
 };
 </script>

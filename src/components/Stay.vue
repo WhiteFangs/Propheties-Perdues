@@ -20,7 +20,7 @@
         <p>
             Quant au secret des arioméens, vous l'emporterez avec vous dans la mort.
         </p>
-        <ListEndings :end="'La fin tranquille'" @change="change" />
+        <ListEndings :end="'La fin certaine'" @change="change" />
     </div>
 </template>
 

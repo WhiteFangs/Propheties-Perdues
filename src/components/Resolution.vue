@@ -5,14 +5,18 @@
       Quelques temps après être sorti, alors que {{ randomTimeVerbe }} {{ time }},
     </div>
     <div>
+      <div v-if="isImpossible">Impossible</div>
+      <div v-if="goodEnding">Good ending</div>
+      <div v-if="badEnding">Bad ending</div>
+      <div v-if="bestEnding">Best ending</div>
+      <div v-if="worstEnding">Worst ending</div>
       TODO
     </div>
-    <ListEndings :end="ending" />
+    <ListEndings :end="ending" @change="change" />
   </div>
 </template>
 
 <script lang="ts">
-import type { Option } from "@/interfaces/option";
 import { useChoiceStore } from "@/stores/choice";
 import ListEndings from "./ListEndings.vue";
 
@@ -88,6 +92,11 @@ export default {
         return "La fin incertaine";
       }
       return ""
+    }
+  },
+  methods: {
+    change: function (status: string) {
+      this.$emit('change', status);
     }
   }
 };

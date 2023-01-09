@@ -1,5 +1,5 @@
 <template>
-    <span class="mutable" @click="change">{{ options[index].text }}</span>
+    <span :class="{'mutable': index < options.length - 1}" @click="change">{{ options[index].text }}</span>
 </template>
 
 <script lang="ts">
@@ -31,8 +31,12 @@ export default {
     methods: {
         change: function () {
             if (this.index < this.options.length - 1) {
-                this.index = (this.index + 1) % this.options.length;
+                // this.index = (this.index + 1) % this.options.length;
+                this.index++;
                 this.store.setChoice(this.options[this.index], this.type);
+                if(this.index === this.options.length - 1){
+                    this.store.incrementExpired();
+                }
             }
         }
     },
