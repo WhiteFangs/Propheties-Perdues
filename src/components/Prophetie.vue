@@ -109,12 +109,17 @@ export default {
         },
         {
           text: "éclairs du ciel",
-          times: ["la saison des orages", "l'épisode sans nuages"],
+          times: ["la saison des orages", "un épisode sans nuages"],
           value: 0
         },
         {
+          text: "reflets de la lune",
+          times: ["la pleine lune", "la nouvelle lune"],
+          value: 1
+        },
+        {
           text: "vents des océans",
-          times: ["la saison des tempêtes", "l'épisode du calme plat"],
+          times: ["la saison des tempêtes", "un épisode de calme plat"],
           value: 1
         },
         {
@@ -126,28 +131,15 @@ export default {
           text: "rayons du soleil",
           times: ["l'aube", "le crépuscule"],
           value: 1
-        },
-        {
-          text: "reflets de la lune",
-          times: ["la pleine lune", "la nouvelle lune"],
-          value: 1
         }
       ] as Option[],
       action: [
-        {
-          text: "tomber",
-          value: -1
-        },
-        {
-          text: "s'étendre",
-          value: 0
-        },
         {
           text: "s'épanouir",
           value: 0
         },
         {
-          text: "prospérer",
+          text: "s'étendre",
           value: 0
         },
         {
@@ -155,8 +147,16 @@ export default {
           value: 1
         },
         {
+          text: "tomber",
+          value: -1
+        },
+        {
           text: "s'évanouir",
           value: 1
+        },
+        {
+          text: "prospérer",
+          value: 0
         },
         {
           text: "s'éteindre",
@@ -165,38 +165,42 @@ export default {
       ] as Option[],
       concept: [
         {
-          text: "mensonges",
-          value: -5
+          text: "peurs",
+          value: -4
         },
         {
           text: "vérités",
           value: 5
         },
         {
-          text: "inspirations",
+          text: "espoirs",
           value: 4
         },
         {
-          text: "espoirs",
+          text: "mensonges",
+          value: -5
+        },
+        {
+          text: "inspirations",
           value: 4
         },
         {
           text: "regrets",
           value: -4
-        },
-        {
-          text: "peurs",
-          value: -4
         }
       ] as Option[],
       devenir: [
+        {
+          text: "évidences",
+          value: 4
+        },
         {
           text: "illusions",
           value: -4
         },
         {
-          text: "évidences",
-          value: 4
+          text: "absurdités",
+          value: -5
         },
         {
           text: "réalité",
@@ -210,45 +214,45 @@ export default {
           text: "volontés",
           value: 4
         },
-        {
-          text: "absurdités",
-          value: -5
-        },
       ] as Option[],
       duo1: [
-        {
-          text: "joie",
-          value: 4
-        },
-        {
-          text: "mort",
-          value: -5
-        },
         {
           text: "vie",
           value: 5
         },
         {
-          text: "malheur",
-          value: -4
-        },
-        {
-          text: "plaisir",
+          text: "joie",
           value: 4
         },
         {
           text: "douleur",
           value: -4
         },
+        {
+          text: "mort",
+          value: -5
+        },
+        {
+          text: "plaisir",
+          value: 4
+        },
+        {
+          text: "malheur",
+          value: -4
+        },
       ] as Option[],
       duo2: [
+        {
+          text: "destruction",
+          value: -5
+        },
         {
           text: "bonheur",
           value: 4
         },
         {
-          text: "destruction",
-          value: -5
+          text: "misère",
+          value: -4
         },
         {
           text: "création",
@@ -262,10 +266,6 @@ export default {
           text: "abondance",
           value: 4
         },
-        {
-          text: "misère",
-          value: -4
-        },
       ] as Option[],
       conclusion: [
         {
@@ -277,16 +277,16 @@ export default {
           value: -4
         },
         {
-          text: "chaos",
-          value: -5
-        },
-        {
           text: "harmonie",
           value: 5
         },
         {
           text: "ascension",
           value: 4
+        },
+        {
+          text: "chaos",
+          value: -5
         },
         {
           text: "défaite",

@@ -87,6 +87,7 @@ html {
 
 .story {
   margin: 2em;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .v-enter-active,
