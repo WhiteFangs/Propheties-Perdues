@@ -2,9 +2,9 @@
     <div class="flex">
         <div class="gutter"></div>
         <div>
-            <div class="end">
+            <h2 class="end">
                 {{ end }}
-            </div>
+            </h2>
             <div class="centered">
                 <ButtonVue :text="'Rejouer'" @click="$emit('change', 'intro')"></ButtonVue>
             </div>
@@ -13,7 +13,7 @@
                 {{ ending }}
             </div>
             <div class="centered">
-                <ButtonVue :text="'Crédits'" @click=""></ButtonVue>
+                <ButtonVue :text="'Crédits'" @click="$emit('change', 'credits')"></ButtonVue>
             </div>
         </div>
         <div class="gutter"></div>
@@ -70,9 +70,8 @@ export default {
 .end {
     text-align: center;
     text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 3em 0;
-    font-weight: bold;
+    font-family: 'Teko', sans-serif;
+    margin: 2em 0;
 }
 
 .ending {

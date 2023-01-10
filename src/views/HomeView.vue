@@ -1,34 +1,40 @@
 <template>
   <main class="story">
     <Transition>
-      <Introduction @change="setStatus" v-if="status === 'intro'" />
+      <Home @change="setStatus" v-if="ready && status === 'home'" />
     </Transition>
     <Transition>
-      <Hesitation @change="setStatus" v-if="status === 'hesitation'" />
+      <Introduction @change="setStatus" v-if="ready && status === 'intro'" />
     </Transition>
     <Transition>
-      <Porte @change="setStatus" v-if="status === 'porte'" />
+      <Hesitation @change="setStatus" v-if="ready && status === 'hesitation'" />
     </Transition>
     <Transition>
-      <Salle @change="setStatus" v-if="status === 'salle'" />
+      <Porte @change="setStatus" v-if="ready && status === 'porte'" />
     </Transition>
     <Transition>
-      <Prophetie @change="setStatus" v-if="status === 'prophecy'" />
+      <Salle @change="setStatus" v-if="ready && status === 'salle'" />
     </Transition>
     <Transition>
-      <Resolution @change="setStatus" v-if="status === 'end'" />
+      <Prophetie @change="setStatus" v-if="ready && status === 'prophecy'" />
     </Transition>
     <Transition>
-      <Quit @change="setStatus" v-if="status === 'quit'" />
+      <Resolution @change="setStatus" v-if="ready && status === 'end'" />
     </Transition>
     <Transition>
-      <Rentre @change="setStatus" v-if="status === 'rentre'" />
+      <Quit @change="setStatus" v-if="ready && status === 'quit'" />
     </Transition>
     <Transition>
-      <Stay @change="setStatus" v-if="status === 'stay'" />
+      <Rentre @change="setStatus" v-if="ready && status === 'rentre'" />
     </Transition>
     <Transition>
-      <Out @change="setStatus" v-if="status === 'out'" />
+      <Stay @change="setStatus" v-if="ready && status === 'stay'" />
+    </Transition>
+    <Transition>
+      <Out @change="setStatus" v-if="ready && status === 'out'" />
+    </Transition>
+    <Transition>
+      <Credits @change="setStatus" v-if="ready && status === 'credits'" />
     </Transition>
   </main>
 </template>
@@ -44,6 +50,8 @@ import Quit from "../components/Quit.vue";
 import Rentre from "../components/Rentre.vue";
 import Stay from "../components/Stay.vue";
 import Out from "../components/Out.vue";
+import Credits from "../components/Credits.vue";
+import Home from "../components/Home.vue";
 
 export default {
   components: {
@@ -56,11 +64,14 @@ export default {
     Quit,
     Rentre,
     Stay,
-    Out
+    Out,
+    Credits,
+    Home
   },
   data: function () {
     return {
-      status: "intro"
+      status: "home",
+      ready: true
     }
   },
   methods: {
@@ -70,9 +81,11 @@ export default {
   },
   watch: {
     status: function () {
+      this.ready = false;
       setTimeout(() => {
+        this.ready = true;
         window.scrollTo(0,0);
-      }, 1000);
+      }, 1500);
     }
   }
 };
@@ -95,9 +108,9 @@ html {
   transition: opacity 1s ease;
 }
 
-.v-enter-active {
+/* .v-enter-active {
   transition-delay: 1.5s;
-}
+} */
 
 .v-enter-from,
 .v-leave-to {
