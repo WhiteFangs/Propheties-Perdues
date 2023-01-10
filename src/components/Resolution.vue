@@ -13,10 +13,12 @@
           S'est-elle réalisée ? Difficile à dire.
         </p>
         <p>
-          Vous avez fait de votre mieux pour l'équilibrer, ou en tout cas y introduire assez de contradictions pour éviter un désastre.
+          Vous avez fait de votre mieux pour l'équilibrer, ou en tout cas y introduire assez de contradictions pour
+          éviter un désastre.
         </p>
         <p>
-          Alors le grand désastre n'est certes pas arrivé. Mais les choses n'ont pas non plus l'air d'avoir changé en mieux.
+          Alors le grand désastre n'est certes pas arrivé. Mais les choses n'ont pas non plus l'air d'avoir changé en
+          mieux.
         </p>
         <p>
           Les petites catastrophes continuent de se produire à intervalles réguliers. Les longs malheurs persistent.
@@ -53,23 +55,61 @@
           La calamité que la prophétie annonçait arrive.
         </p>
         <p>
-          Votre sinistre dessein est en train de se réaliser sous vos yeux. L'humanité fait face à ses pires moments.
+          Votre sinistre dessein est en train de se réaliser sous vos yeux. L'humanité fait face à son crépuscule.
         </p>
         <p>
-          Les anciens malheurs passent pour des réjouissances en comparaison à ce qui s'inflige dorénavant au monde.
+          Les anciens malheurs passent pour des réjouissances en comparaison des supplices qui torturent dorénavant le monde.
         </p>
         <p>
           Les catastrophes naturelles et épidémies prolifèrent, les humains agonisent, c'est l'apocalypse.
         </p>
         <p>
-          L'humanité succombe jour après jour à ces cataclysmes. Plus personne ne sait ce que sont la joie ou l'espoir.
+          La population s'abandonne jour après jour à ces cataclysmes. Joie et espoir ont quitté tous les cœurs.
         </p>
         <p>
-          Dans cette fin des temps, vous vous dites que c'est bien fait et tant pis.
+          En cette fin des temps, vous vous dites que c'est bien fait et tant pis.
         </p>
       </div>
-      <div v-if="goodEnding">Good ending</div>
-      <div v-if="bestEnding">Best ending</div>
+      <div v-if="goodEnding">
+        <p>
+          L'avenir radieux qu'elle promettait était donc vrai.
+        </p>
+        <p>
+          Votre inscription a initié une suite de réussites à travers le monde. Le quotidien de chacun s'est embelli.
+        </p>
+        <p>
+          Les grands malheurs et catastrophes du passé ne sont plus, seules les bonnes nouvelles désormais se multiplient.
+        </p>
+        <p>
+          La planète redevient vivable, les humains s'aiment les uns les autres, tout va mieux.
+        </p>
+        <p>
+          Les peurs de l'humanité disparaissent de jours en jours. Rares et brefs sont les épisodes de douleur.
+        </p>
+        <p>
+          Dans cette surprenante prospérité, vous vous dites que finalement, ça en valait la peine.
+        </p>
+      </div>
+      <div v-if="bestEnding">
+        <p>
+          Le miracle que la prophétie annonçait arrive.
+        </p>
+        <p>
+          Votre plan brillant est en train de se réaliser sous vos yeux. L'humanité est à l'aube d'une ère de prospérité inégalée.
+        </p>
+        <p>
+          Les réjouissances du passé ne sont rien en comparaison des festivités qui parsèment dorénavant le monde.
+        </p>
+        <p>
+          Les bonnes fortunes et découvertes à succès foisonnent, les humains triomphent de joie, c'est l'éden.
+        </p>
+        <p>
+          Douleur et malheur ne sont plus de ce monde. L'humanité s'épanouit de jour en jour grâce à ces merveilles.
+        </p>
+        <p>
+          En ce début d'âge d'or, vous vous dites que, quand même, c'est un peu trop beau pour être vrai.
+        </p>
+      </div>
     </div>
     <ListEndings :end="ending" @change="change" />
   </div>
