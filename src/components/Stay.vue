@@ -1,24 +1,22 @@
 <template>
     <div>
         <p>
-            Vous rentrez finalement chez vous, en vie.
+            À l'aide des blocs de runes judicieusement placés, vous condamnez l'entrée de la salle.
         </p>
         <p>
-            Après quelques temps de repos bien mérité, vous décidez de ne pas en rester là.
+            C'est-à-dire votre unique porte de sortie.
         </p>
         <p>
-            Il faut se prémunir. Sage d'une quête inachevée, vous procédez à la destruction de tous vos documents sur
-            les arioméens.
+            Pour vous éviter tout futur espoir, vous essayez de toutes vos forces de la débloquer, sans succès. C'est du beau travail.
         </p>
         <p>
-            Peu importe que leur création soit ancrée dans la réalité ou un tissu d'absurdités, démêler leurs mensonges
-            des vérités ne suffirait pas à empêcher le chaos de leurs prophéties.
+            Maintenant que votre fin est inévitable, vous vous sentez en paix avec vous-même. C'est peut-être ça la sagesse.
         </p>
         <p>
-            Une fois la tâche accomplie, vous vous sentez enfin en harmonie avec vous-même.
+            Vous vous dites qu'il vaut mieux assumer ses erreurs que de prendre le risque de condamner l'humanité entière.
         </p>
         <p>
-            Quant au secret des arioméens, vous l'emporterez avec vous dans la mort.
+            Au prix de votre vie, vous empêcherez la réalisation de cette maudite prophétie.
         </p>
         <ListEndings :end="'La fin certaine'" @change="change" />
     </div>
