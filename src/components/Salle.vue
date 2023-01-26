@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            Vous poussez de toutes vos forces les lourdes portes, elle se referment derrière vous dans un bruit sourd.
+            Vous poussez de toutes vos forces les lourdes portes, elles se referment derrière vous dans un bruit sourd.
         </p>
         <p>
             Vous y êtes.

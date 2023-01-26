@@ -19,11 +19,11 @@
             Sous le zénith, vous pénétrez dans l'enceinte du temple, plein de solennité.
         </p>
         <p>
-            Vous êtes accueilli par un hall immense décoré de fresques monumentales.<br />
+            Un hall immense décoré de fresques monumentales vous accueille.<br />
             Des histoires de guerres et de naissances, de temps et de saisons, d'ambitions et de trahisons.
         </p>
         <p>
-            Mais vous n'êtes pas venu pour étudier ces ruines.
+            Mais vous n'êtes pas ici pour étudier ces ruines.
         </p>
         <p>
             Au fond, une double porte en pierre se dessine: l'entrée de la salle des prophéties.

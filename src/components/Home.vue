@@ -36,8 +36,38 @@ export default {
 }
 
 .home h1 {
-    font-size: 20vh;
+    font-size: 5em;
     line-height: .7;
+}
+
+@media (max-width: 640px) {
+    .home h1 {
+        font-size: 4em;
+    }
+
+    .home h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 460px) {
+    .home h1 {
+        font-size: 3em;
+    }
+
+    .home h2 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .home h1 {
+        font-size: 2em;
+    }
+
+    .home h2 {
+        font-size: .8em;
+    }
 }
 
 .buttons {

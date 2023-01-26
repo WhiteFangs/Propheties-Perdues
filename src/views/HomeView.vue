@@ -84,7 +84,7 @@ export default {
       this.ready = false;
       setTimeout(() => {
         this.ready = true;
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
       }, 1500);
     }
   }
@@ -94,12 +94,14 @@ export default {
 <style>
 html {
   color: #363124;
-  font-size: 1.5em;
+  font-size: 18pt;
   background: #FFF1E6;
 }
 
 .story {
-  margin: 2em;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 800px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -108,17 +110,14 @@ html {
   transition: opacity 1s ease;
 }
 
-/* .v-enter-active {
-  transition-delay: 1.5s;
-} */
-
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
 }
 
-.v-enter-active button,
-.v-leave-active button {
+.v-enter-active .button-container,
+.v-leave-active .button-container {
   visibility: hidden;
+  pointer-events: none;
 }
 </style>

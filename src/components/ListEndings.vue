@@ -1,11 +1,11 @@
 <template>
     <div class="flex">
         <div class="gutter"></div>
-        <div>
+        <div class="centered">
             <h2 class="end">
                 {{ end }}
             </h2>
-            <div class="centered">
+            <div>
                 <ButtonVue :text="'Rejouer'" @click="$emit('change', 'intro')"></ButtonVue>
             </div>
             <div class="ending" v-for="ending in endings" :key="ending"
@@ -75,10 +75,19 @@ export default {
 }
 
 .ending {
+    display: inline-block;
+    margin: .3em;
+    padding: .3em .5em;
+    color: #5c2d13;
+    background: #EDDCD2;
+    border: .3em solid #5c2d13;
+    font-size: .9em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .ending.done {
     text-decoration: line-through;
+    background: #5c2d13;
+    color: #EDDCD2;
 }
 </style>

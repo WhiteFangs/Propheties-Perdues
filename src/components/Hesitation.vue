@@ -13,7 +13,7 @@
             Est-ce à vous de porter cette responsabilité ? Est-ce que ça vaut même le coup de prendre le risque ?
         </p>
         <p>
-            Votre cerveau bouillonne de reflexions, chacune menant vers d'autres questions, mais il va bien falloir choisir.
+            Votre cerveau bouillonne de réflexions, chacune menant vers d'autres questions, mais il va bien falloir choisir.
         </p>
         <ButtonVue :text="'Renoncer et quitter le temple'" @click="$emit('change', 'quit')"></ButtonVue>
         <ButtonVue :text="'Revenir vers la double porte'" @click="$emit('change', 'porte')"></ButtonVue>

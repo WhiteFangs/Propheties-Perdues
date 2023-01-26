@@ -19,11 +19,11 @@
     <div class="prophecy centered">
       <div>
         Lorsque les <Mutable :options="nature" :type="'nature'"></Mutable> viendront à <Mutable :options="action"
-          :type="'action'"></Mutable>
+          :type="'action'"></Mutable>,
       </div>
       <div>
         Les <Mutable :options="concept" :type="'concept'"></Mutable> deviendront <Mutable :options="devenir"
-          :type="'devenir'"></Mutable>
+          :type="'devenir'"></Mutable>,
       </div>
       <div>
         Alors, <Mutable :options="duo1" :type="'duo1'"></Mutable> et <Mutable :options="duo2" :type="'duo2'"></Mutable>

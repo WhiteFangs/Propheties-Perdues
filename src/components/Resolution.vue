@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <h2>{{ score }}</h2> -->
     <p>
       Vous rentrez finalement chez vous.
     </p>
@@ -64,7 +63,7 @@
           Les catastrophes naturelles et épidémies prolifèrent, les humains agonisent, c'est l'apocalypse.
         </p>
         <p>
-          La population s'abandonne jour après jour à ces cataclysmes. Joie et espoir ont quitté tous les cœurs.
+          Jour après jour, ces cataclysmes viennent à bout de chacun. Joie et espoir ont quitté tous les cœurs.
         </p>
         <p>
           En cette fin des temps, vous vous dites que c'est bien fait et tant pis.

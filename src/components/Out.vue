@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            Vous sortez de la salle des prophétie, les portes se referment dans un fracas retentissant.
+            Vous sortez de la salle des prophéties, les portes se referment dans un fracas retentissant.
         </p>
         <p>
             Au même instant, le sol commence à trembler. Le temple est en train de s'effondrer.
